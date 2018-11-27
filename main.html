@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>WorkSpace | R.O.C.T.</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+</head>
+
+<body>
+	<h2>Welcome to Real-time document collaboration tool!</h2>
+	<h2>Anuj Anjrwala & Viren Rakholiya</h2>
+	<div id="editor"></div>
+	<div id="loader"></div>
+	<div class="controls">
+		<button onclick="share()">Share It!</button>
+
+		<button onclick="logout()">Logout</button>
+
+		<form>
+			<input id="input" name="id" placeholder="Editor name">
+		</form>
+
+		<select id="select-theme" class="select-input">
+			<optgroup label="Bright">
+				<option value="ace/theme/chrome">Chrome</option>
+				<option value="ace/theme/eclipse">Eclipse</option>
+				<option value="ace/theme/github">GitHub</option>
+				<option value="ace/theme/xcode">XCode</option>
+				<option value="ace/theme/sqlserver">SQL Server</option>
+			</optgroup>
+			<optgroup label="Dark">
+				<option value="ace/theme/ambiance">Ambiance</option>
+				<option value="ace/theme/chaos">Chaos</option>
+				<option value="ace/theme/clouds_midnight">Clouds Midnight</option>
+				<option value="ace/theme/terminal">Terminal</option>
+			</optgroup>
+		</select>
+		<select id="select-lang" class="select-input">
+			<option value="c_cpp">C and C++</option>
+			<option value="csharp">C#</option>
+			<option value="css">CSS</option>
+			<option value="ejs">EJS</option>
+			<option value="fortran">Fortran</option>
+			<option value="html">HTML</option>
+			<option value="java">Java</option>
+			<option value="javascript">JavaScript</option>
+			<option value="json">JSON</option>
+			<option value="jsp">JSP</option>
+			<option value="jsx">JSX</option>
+			<option value="text">Text</option>
+		</select>
+	</div>
+	<script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/urljs/2.3.1/url.min.js"></script>
+	<script type="text/javascript" src="js/mainjs.js"></script>
+	<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+	<script type="text/javascript">
+		(function () {
+			emailjs.init("user_AOK5rQNf5JNFahYPHcHeo");
+		})();
+	</script>
+</body>
+
+</html>

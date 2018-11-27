@@ -1,0 +1,48 @@
+<html>
+<head>
+  <title>Login | R.O.C.T.</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="login_div" class="main-div">
+    <h3>Login | R.O.C.T.</h3>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="loginwithfirebase()">Login to Account</button>
+    <br>
+    <button onclick="register()">Register Yourself</button>
+  </div>
+  
+  <div id="user_div" class="loggedin-div">
+      <h3>Register | R.O.C.T.</h3>
+      <input type="email" placeholder="Email..." id="remail_field" />
+      <input type="password" placeholder="Password..." id="rpassword_field" />
+      <input type="password" placeholder="Confirm Password..." id="c_rpassword_field" />
+      <button onclick="registerwithfirebase()">Register</button>
+      <br>
+      <button onclick="login()">Login Instead</button>
+  </div>
+
+
+
+  
+<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "",
+    authDomain: "",
+    databaseURL: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: ""
+  };
+  firebase.initializeApp(config);
+</script>
+  <script src="index.js"></script>
+
+</body>
+</html>
